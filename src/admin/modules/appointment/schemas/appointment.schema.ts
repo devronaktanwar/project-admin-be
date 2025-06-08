@@ -22,6 +22,8 @@ export class Appointment {
 
   @Prop()
   description: string;
+
+  id:number
 }
 
 export const AppointmentSchema = SchemaFactory.createForClass(Appointment);

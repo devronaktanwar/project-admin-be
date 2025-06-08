@@ -12,7 +12,10 @@ export class AppointmentService {
   ) {}
 
   async create(dto: CreateAppointmentDto): Promise<Appointment> {
-    const created = new this.appointmentModel(dto);
+    const created = new this.appointmentModel({
+      ...dto,
+      id: Math.floor(100000 + Math.random() * 900000),
+    });
     return created.save();
   }
 

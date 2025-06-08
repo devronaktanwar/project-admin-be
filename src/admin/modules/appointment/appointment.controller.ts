@@ -12,7 +12,7 @@ import {
 import { AppointmentService } from './appointment.service';
 import { CreateAppointmentDto } from './dto/create-appointment.dto';
 
-@Controller('appointments')
+@Controller('appointment')
 export class AppointmentController {
   constructor(private readonly appointmentsService: AppointmentService) {}
 
